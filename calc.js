@@ -16,6 +16,9 @@ function f1(x) {
             ans = parseInt(val1.value) / parseInt(val2.value)
             break;
     }
-    var v = document.getElementById("ans")
-    v.innerHTML = "Ans is " + ans
+    let ll = document.createElement("li");
+    let t = `${val1.value} ${x} ${val2.value}  =  ${ans}`;
+    let text = document.createTextNode(t);
+    ll.appendChild(text);;
+    document.getElementById("ans").appendChild(ll);
 }
