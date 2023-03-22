@@ -1,6 +1,6 @@
 // console.log("connected")
 
-let table = document.getElementById("id_details");
+let table = document.getElementById("id_car");
 let audiObj = {
     name: " Audi TT",
     Type: "2 seater sports",
@@ -17,25 +17,6 @@ let balenoObj = {
     price: " 58 Lakhs"
 }
 
-function create_head(table, obj) {
-    let thead = table.createTHead();
-    thead.insertRow();
-    for (let key in obj) {
-        let th = document.createElement("th");
-        let text = document.createTextNode(key);
-        th.appendChild(text);
-        row.appendChild(th);
-
-    }
-}
-function data(table, obj) {
-    let row = table.insertRow();
-    for (let key in obj) {
-        let cell = row.insertCell();
-        let text = document.createTextNode(obj[key]);
-        cell.appendChild(text);
-    }
-}
 function audi() {
     create_head(table, audiObj);
     data(table, audiObj);
